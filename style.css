@@ -499,7 +499,9 @@ table th {
     margin-top: 8px;
 }
 
-/* Mobile Styles */
+/* =============================================
+   MOBILE STYLES
+   ============================================= */
 @media (max-width: 768px) {
     .container {
         margin: 10px;
@@ -571,8 +573,17 @@ table th {
         padding: 0;
     }
 
+    /* Make card grid single column on mobile */
     .card-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 15px 0;
+    }
+
+    /* Tighten card padding on mobile */
+    .card {
+        padding: 16px;
+        margin-bottom: 0;
     }
 
     .resume-container {
@@ -633,9 +644,10 @@ table th {
         padding: 25px 15px;
     }
 
+    /* Tighten content blocks on mobile */
     .content-block {
-        padding: 20px 15px;
-        margin: 25px 0;
+        padding: 15px;
+        margin: 20px 0;
     }
 
     h2 {
@@ -644,6 +656,8 @@ table th {
 
     h3 {
         font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
     table {
@@ -653,6 +667,22 @@ table th {
         -webkit-overflow-scrolling: touch;
         border: 1px solid var(--border);
         border-radius: var(--radius);
+    }
+
+    /* =============================================
+       HIDE FLOATING SIDEBAR IMAGES ON MOBILE
+       This targets the inline float: right image
+       container on the digital-learning page
+       ============================================= */
+    .digital-learning-sidebar {
+        display: none;
+    }
+
+    /* Fallback: also hide any inline-styled float
+       right divs that contain only images */
+    main > div[style*="float: right"],
+    main > div[style*="float:right"] {
+        display: none !important;
     }
 }
 
