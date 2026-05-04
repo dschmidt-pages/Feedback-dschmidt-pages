@@ -460,6 +460,13 @@ table th {
     border: 2px solid var(--wm-green);
 }
 
+/* Digital Learning sidebar (desktop: float right, mobile: hidden) */
+.digital-learning-sidebar {
+    float: right;
+    margin: 0 0 20px 20px;
+    width: 200px;
+}
+
 /* Content Blocks */
 .content-block {
     background-color: var(--surface);
@@ -669,20 +676,9 @@ table th {
         border-radius: var(--radius);
     }
 
-    /* =============================================
-       HIDE FLOATING SIDEBAR IMAGES ON MOBILE
-       This targets the inline float: right image
-       container on the digital-learning page
-       ============================================= */
+    /* Hide decorative sidebar images on mobile */
     .digital-learning-sidebar {
         display: none;
-    }
-
-    /* Fallback: also hide any inline-styled float
-       right divs that contain only images */
-    main > div[style*="float: right"],
-    main > div[style*="float:right"] {
-        display: none !important;
     }
 }
 
